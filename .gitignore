@@ -18,3 +18,4 @@ test
 *.json
 hardhat.config.ts
 yarn.lock
+flatten

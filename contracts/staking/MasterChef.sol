@@ -67,6 +67,9 @@ contract MasterChef is Ownable {
     uint256 public cronaPerBlock;
     // Bonus muliplier for early crona makers.
     uint256 public BONUS_MULTIPLIER = 1;
+    // Max finsPerSecond keep never ol
+    uint256 public constant maxCronaPerBlock = 10e18;
+
     // The migrator contract. It has a lot of power. Can only be set through governance (owner).
     IMigratorChef public migrator;
 
@@ -320,6 +323,12 @@ contract MasterChef is Ownable {
     // Safe crona transfer function, just in case if rounding error causes pool to not have enough CRONAs.
     function safeCronaTransfer(address _to, uint256 _amount) internal {
         xCrona.safeCronaTransfer(_to, _amount);
+    }
+
+    function setCronaPerBlock(uint256 _cronaPerBlock) public onlyOwner {
+        require(_cronaPerBlock <= maxCronaPerBlock, "cronaPerBlock: ol?");
+        massUpdatePools();
+        cronaPerBlock = _cronaPerBlock;
     }
 
     // Update dev address by the previous dev.
