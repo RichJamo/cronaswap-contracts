@@ -1,14 +1,14 @@
 # CronaSwap Protocol
 
-Contract address list (Cronos testnet):
+Contract address list (Cronos testnet - 338):
 
-Crona Token: 0x19CBbe7e4EdE56676B16299071D92eDdec5A673e
+Crona Token: 0x27b9843E2B1566a99314902F1a6c77AAA98bd9DD
 
-CronaSwapRouter: 0xF530931125C4BC7E221BB0798b921F104623bED9
+CronaSwapRouter: 0x110a55949B11d263fdd26f4760446dE44d216E14
 
-CronaSwapFactory: 0xaDe81A1182455B2fd0e7a731b923d06eabF4984e
+CronaSwapFactory: 0x4D7aa1bC7CF5437031f9cD6881422C1204dd4592
 
-MasterChef: 0x013FC6Bd2A894aa576Fd9e519fef116385fA001f
+MasterChef: 0xeC4ef032Ff5EDC5c384Eb80aE87dC7084C9B2c10
 
 Try running some of the following tasks:
 
